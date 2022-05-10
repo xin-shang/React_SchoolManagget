@@ -29,7 +29,7 @@ function HomeStack() {
       <Stack.Screen name="Registration" component={Registration}/>
       <Stack.Screen name="Login" component={Login}/>
       <Stack.Screen name="Home" component={Home}/>
-      
+
       {/* Might move to a different screen */}
       <Stack.Screen name="Study Timer" component={StudyTimer}/>
     </Stack.Navigator>
@@ -81,6 +81,7 @@ export default function App() {
           name="Home Stack"
           component={HomeStack}
           options={{
+            headerShown: false,
             tabBarLabel: 'Home',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
@@ -94,6 +95,7 @@ export default function App() {
           name="CourseStack"
           component={CourseStack}
           options={{
+            headerShown: false,
             tabBarLabel: 'Courses',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
@@ -107,6 +109,7 @@ export default function App() {
           name="CalendarStack"
           component={CalendarStack}
           options={{
+            headerShown: false,
             tabBarLabel: 'Calendar',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
@@ -120,6 +123,7 @@ export default function App() {
           name="ProfileStack"
           component={ProfileStack}
           options={{
+            headerShown: false,
             tabBarLabel: 'Profile',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
@@ -133,6 +137,7 @@ export default function App() {
           name="SettingsStack"
           component={SettingsStack}
           options={{
+            headerShown: false,
             tabBarLabel: 'Settings',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
