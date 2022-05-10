@@ -3,12 +3,11 @@ import { View, Button } from 'react-native';
 const Home = ({ navigation }) => {
     return (
     <View>
-        <Button title="Course Select" onPress={() => navigation.navigate('Course Select')}/>
+        {/* <Button title="Course Select" onPress={() => navigation.navigate('Course Select')}/>
         <Button title="User Profile" onPress={() => navigation.navigate('User Profile')}/>
-        <Button title="Store" onPress={() => navigation.navigate('Store')}/>
-        <Button title="Calendar" onPress={() => navigation.navigate('Calendar')}/>
+        <Button title="Calendar" onPress={() => navigation.navigate('Calendar')}/> */}
         <Button title="Study Timer" onPress={() => navigation.navigate('Study Timer')}/>
-        <Button title="Settings" onPress={() => navigation.navigate('Settings')}/>
+        {/* <Button title="Settings" onPress={() => navigation.navigate('Settings')}/> */}
     </View>
     );
 }

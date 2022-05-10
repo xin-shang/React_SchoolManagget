@@ -39,34 +39,6 @@ const CoursePage = ({ navigation }) => {
             </CollapseBody>
           </Collapse>
       </View>
-
-      {/* Start of Navbar */}
-      <View style={{
-        backgroundColor: "red",
-        flex: .1,
-        flexDirection: "row"
-        }}>
-          <View style={{
-            backgroundColor: "pink",
-            flex: 1
-          }}></View>
-          <View style={{
-            backgroundColor: "orange",
-            flex: 1
-          }}></View>
-          <View style={{
-            backgroundColor: "purple",
-            flex: 1
-          }}></View>
-          <View style={{
-            backgroundColor: "green",
-            flex: 1
-          }}></View>
-          <View style={{
-            backgroundColor: "red",
-            flex: 1
-          }}></View>
-      </View>
       <StatusBar style="auto" />
     </SafeAreaView>
   );

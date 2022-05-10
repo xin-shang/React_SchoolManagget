@@ -12,40 +12,14 @@ const UserProfile = ({ navigation }) => {
       //alignItems: "center"
     }}>
       <View style={{
-        backgroundColor: "dodgerblue",
+        backgroundColor: "#fff",
         flex: 1,
         alignItems: "center",
         justifyContent: "center"
         }}>
           <Button title="Achievements" onPress={() => navigation.navigate('Achievements')}/>
           <Button title="Friends" onPress={() => navigation.navigate('Friends')}/>
-      </View>
-      {/* Start of Navbar */}
-      <View style={{
-        backgroundColor: "red",
-        flex: .10,
-        flexDirection: "row"
-        }}>
-          <View style={{
-            backgroundColor: "pink",
-            flex: 1
-          }}></View>
-          <View style={{
-            backgroundColor: "orange",
-            flex: 1
-          }}></View>
-          <View style={{
-            backgroundColor: "purple",
-            flex: 1
-          }}></View>
-          <View style={{
-            backgroundColor: "green",
-            flex: 1
-          }}></View>
-          <View style={{
-            backgroundColor: "red",
-            flex: 1
-          }}></View>
+          <Button title="Store" onPress={() => navigation.navigate('Store')}/>
       </View>
       <StatusBar style="auto" />
     </SafeAreaView>
