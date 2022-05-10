@@ -1,6 +1,6 @@
 import { TouchableOpacity, StyleSheet, Text, View, Platform, TextInput } from 'react-native';
 
-const Registration = () => {
+const Registration = ({ navigation }) => {
     return (
         <View style={styles.signupWrapper}>
             <Text style={styles.sectionTitle}>SIGN UP</Text>
