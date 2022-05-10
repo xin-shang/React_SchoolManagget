@@ -1,8 +1,11 @@
-import { View } from 'react-native';
+import { View, Button } from 'react-native';
 
 const Login = ({ navigation }) => {
     return (
-    <View></View>
+    <View>
+        <Button title="Home" onPress={() => navigation.navigate('Home')}/>
+        <Button title="Register" onPress={() => navigation.navigate('Registration')}/>
+    </View>
     );
 }
 

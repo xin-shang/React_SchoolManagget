@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, View, Text } from 'react-native';
+import { SafeAreaView, StyleSheet, View, Button } from 'react-native';
 
 const UserProfile = ({ navigation }) => {
   return (
@@ -17,6 +17,8 @@ const UserProfile = ({ navigation }) => {
         alignItems: "center",
         justifyContent: "center"
         }}>
+          <Button title="Achievements" onPress={() => navigation.navigate('Achievements')}/>
+          <Button title="Friends" onPress={() => navigation.navigate('Friends')}/>
       </View>
       {/* Start of Navbar */}
       <View style={{

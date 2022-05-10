@@ -38,7 +38,6 @@ const CoursePage = ({ navigation }) => {
               <Text>Quiz</Text>
             </CollapseBody>
           </Collapse>
-          <Button title="Press" onPress={() => navigation.navigate('User Profile')}/>
       </View>
 
       {/* Start of Navbar */}
