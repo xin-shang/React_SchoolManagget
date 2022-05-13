@@ -1,18 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import blockquote from 'hexo/lib/plugins/tag/blockquote';
-import { StyleSheet, Text, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-web';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default function App() {
+
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
-      <TouchableOpacity style = {styles.button1}>
-        <Text>Calendar</Text>
-      </TouchableOpacity>
+        <TouchableOpacity style = {styles.button1} 
+            onPress={() => {
+              navigate('calender');
+            }}>
+          <Text>Calendar</Text>
+        </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
   );
+  
+  function runCalender () {
+
+  }
+
 }
 
 const styles = StyleSheet.create({
@@ -24,9 +31,9 @@ const styles = StyleSheet.create({
   },
 
   button1: {
-    width:100,
-    Height:30,
-    backgroundColor: "blue",
+    width:150,
+    Height:80,
+    backgroundColor: "skyblue",
     borderRadius:5,
     justifyContent: "center",
     alignItems: "center"
