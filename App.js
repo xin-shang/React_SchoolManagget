@@ -29,7 +29,7 @@ function HomeStack() {
       <Stack.Screen name="Registration" component={Registration}/>
       <Stack.Screen name="Login" component={Login}/>
       <Stack.Screen name="Home" component={Home}/>
-
+      
       {/* Might move to a different screen */}
       <Stack.Screen name="Study Timer" component={StudyTimer}/>
     </Stack.Navigator>
