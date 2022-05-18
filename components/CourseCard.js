@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
 export default class CourseCard extends Component {
@@ -12,13 +12,14 @@ export default class CourseCard extends Component {
     
     return(
       <View style={{
-        marginTop: 5
+        marginTop: 5,
+        marginLeft: 5,
+        width: 300
       }}>
       
         <View style={{
           flexDirection: "row",
-          height: 50,
-          width: "100%"
+          height: 110
           }}>
             <View style={{
               backgroundColor: "#fff",
@@ -27,30 +28,33 @@ export default class CourseCard extends Component {
               borderTopLeftRadius: 10
             }}>
               <View style={{paddingLeft: 3, paddingTop: 3}}>
-                <Text>{ this.props.title }</Text>
+                <Text style={styles.datefont}>{ this.props.title }</Text>
               </View>
+              {/* Max 300 characters for a body description */}
               <View style={{paddingLeft: 3}}>
                 <Text>{ this.props.body }</Text>
               </View>
             </View>
             <View style={{
-              backgroundColor: "red",
-              flex: 1.5
+              backgroundColor: "#edf1f9",
+              flex: 1
             }}>
-              <View style={{alignItems: "center", justifyContent: "center", flex: 1}}>
-                <Text>{ this.props.day }</Text>
+              <View style={{alignItems: "center", justifyContent: "flex-end", flex: 1}}>
+                <Text style={styles.datefont}>{ this.props.day }</Text>
               </View>
-              <View style={{alignItems: "center", flex: 1}}>
-                <Text>{ this.props.month }</Text>
+              <View style={{alignItems: "center", justifyContent: "flex-start", flex: 1}}>
+                <Text style={styles.datefont}>{ this.props.month }</Text>
               </View>
             </View>
             <View style={{
-              backgroundColor: "orange",
-              flex: 1,
+              backgroundColor: "#edf1f9",
+              flex: .5,
               borderBottomRightRadius: 10,
-              borderTopRightRadius: 10
+              borderTopRightRadius: 10,
+              alignItems: "flex-start",
+              justifyContent: "center"
             }}>
-              <Text>Add CheckBox Here</Text>
+              <Text style={styles.datefont}>✓</Text>
             </View>
           </View>
       </View>
@@ -59,9 +63,10 @@ export default class CourseCard extends Component {
 }
 
 const styles = StyleSheet.create({
-  collapseheading: {
-    
+  datefont: {
+    fontWeight: "bold",
+    fontSize: 20,
   },
-});
+ });
 
 CourseCard.propTypes = { title: PropTypes.string.isRequired, body: PropTypes.string.isRequired, day: PropTypes.string.isRequired, month: PropTypes.string.isRequired, time: PropTypes.string.isRequired };

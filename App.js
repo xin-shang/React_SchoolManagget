@@ -40,7 +40,7 @@ function CourseStack() {
   return (
     <Stack.Navigator initialRouteName="Course Select">
       <Stack.Screen name="Course Select" component={CourseSelect}/>
-      <Stack.Screen name="Course Page" component={CoursePage}/>
+      <Stack.Screen name="Course Page" component={CoursePage} options={({ route }) => ({ title: route.params.name })}/>
     </Stack.Navigator>
   );
 }
