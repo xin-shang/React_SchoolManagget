@@ -1,10 +1,12 @@
 // //
-// import React from "react";
+// import * as React from "react";
 
 // // 声明拓展件
 // import { ScrollView, StyleSheet } from 'react-native';
 // import { Button, Card } from 'react-native-paper';
 // //import { DefaultTheme } from 'react-native-paper';
+
+
 
 // //
 // function HomeScreen () {
@@ -16,6 +18,9 @@
 //         </ScrollView>
 //     );
 // }
+
+// // 默认导出
+// export default HomeScreen
 
 // const styles = StyleSheet.create ({
 //     //背景颜色，填充顶部10？
@@ -31,6 +36,5 @@
 //     }
 // });
 
-// // 默认导出
-// export default HomeScreen
+
 
