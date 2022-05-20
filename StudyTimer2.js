@@ -6,29 +6,36 @@ import { CountdownCircleTimer } from 'react-native-countdown-circle-timer';
 
 
 const StudyTimer2 = ({navigation}) => {
-  const [isPlaying, setIsPlaying] = React.useState(false)
+  const [isPlaying, setIsPlaying] = React.useState(true)
+  const [secondsLeft] = React.useState(7200);
 
 
   return (
-    <View style={styles.container}>
+    <View style= {styles.container}>
       <CountdownCircleTimer
         isPlaying={isPlaying}
-        duration={7200} //Enter time here
+        duration={secondsLeft} //Enter time here
        
         colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
         colorsTime={[10, 6, 3, 0]}
-        onComplete={() => ({ shouldRepeat: false, delay: 2 })}
-    >
+        onComplete={() => ({ shouldRepeat: false, delay: 2 })}>
+    
       {({ remainingTime, color }) => (
-        <Text style={{ color, fontSize: 40 }}>
-          {remainingTime}
+        <Text style={{ color, fontSize: 25 }}>
+          {Math.floor(remainingTime /60 / 60)} Hours {Math.floor((remainingTime / 60) % 60)} Minutes {Math.floor(remainingTime % 60)} Seconds
+         
         </Text>
       )}
     </CountdownCircleTimer>
-    <Button title="Start/Stop" onPress={() => setIsPlaying(prev => !prev)} />
-  </View>
+      <Button title="Start" onPress={() => setIsPlaying(true)} />
+      <Button title="Stop" onPress={() => setIsPlaying(false)} />
+    </View>
   )
-}
+
+  }
+
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -38,6 +45,12 @@ const styles = StyleSheet.create({
     paddingTop: Constants.statusBarHeight,
     backgroundColor: '#ecf0f1',
     padding: 8,
+    fontSize: 30,
+  },
+  time: {
+    color: '#000',
+    textAlign: 'center',
+    fontSize: 30,
   }
 });
 
