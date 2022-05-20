@@ -8,15 +8,20 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // 
 import HomeScreen from './screen/HomeScreen';
 import Calendar from './screen/Calender';
+import Achievement from './screen/Achievement';
+import InGameStore from './screen/InGameStore';
 
 const Stack = createNativeStackNavigator();
 
+// 标题是可以去掉的 在Stack.Navigator后面 + headerMode=“none”
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Mobile Gamification" component={HomeScreen} />
-        <Stack.Screen name="Calender" component={Calendar} />
+      <Stack.Navigator initialRouteName='Mobile Gamification Home'>
+        <Stack.Screen name="Mobile Gamification Home" component={HomeScreen}/>
+        <Stack.Screen name="Calender" component={Calendar}/>
+        <Stack.Screen name="Achievement" component={Achievement}/>
+        <Stack.Screen name="InGameStore" component={InGameStore}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
