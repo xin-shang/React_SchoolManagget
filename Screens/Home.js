@@ -6,7 +6,7 @@ const Home = ({ navigation }) => {
         {/* <Button title="Course Select" onPress={() => navigation.navigate('Course Select')}/>
         <Button title="User Profile" onPress={() => navigation.navigate('User Profile')}/>
         <Button title="Calendar" onPress={() => navigation.navigate('Calendar')}/> */}
-        <Button title="Study Timer" onPress={() => navigation.navigate('Study Timer')}/>
+        <Button title="Study Timer" onPress={() => navigation.navigate('TimerSelector')}/>
         {/* <Button title="Settings" onPress={() => navigation.navigate('Settings')}/> */}
     </View>
     );

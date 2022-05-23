@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -20,18 +19,26 @@ import CalendarItem from './Screens/CalendarItem'
 import StudyTimer from './Screens/StudyTimer'
 import Settings from './Screens/Settings'
 
+import StudyTimer1 from './Screens/StudyTimer1';
+import StudyTimer2 from './Screens/StudyTimer2';
+import StudyTimer3 from './Screens/StudyTimer3';
+import TimerSelector from './Screens/TimerSelector'
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function HomeStack() {
   return (
     <Stack.Navigator initialRouteName="Login">
-      <Stack.Screen name="Registration" component={Registration}/>
-      <Stack.Screen name="Login" component={Login}/>
-      <Stack.Screen name="Home" component={Home}/>
-      
+      <Stack.Screen name="Registration" component={Registration} />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Home" component={Home} />
+
       {/* Might move to a different screen */}
-      <Stack.Screen name="Study Timer" component={StudyTimer}/>
+      <Stack.Screen name="TimerSelector" component={TimerSelector} />
+      <Stack.Screen name="Study Timer1" component={StudyTimer1} />
+      <Stack.Screen name="Study Timer2" component={StudyTimer2} />
+      <Stack.Screen name="Study Timer3" component={StudyTimer3} />
     </Stack.Navigator>
   );
 }
@@ -39,8 +46,8 @@ function HomeStack() {
 function CourseStack() {
   return (
     <Stack.Navigator initialRouteName="Course Select">
-      <Stack.Screen name="Course Select" component={CourseSelect}/>
-      <Stack.Screen name="Course Page" component={CoursePage} options={({ route }) => ({ title: route.params.name })}/>
+      <Stack.Screen name="Course Select" component={CourseSelect} />
+      <Stack.Screen name="Course Page" component={CoursePage} options={({ route }) => ({ title: route.params.name })} />
     </Stack.Navigator>
   );
 }
@@ -48,8 +55,8 @@ function CourseStack() {
 function CalendarStack() {
   return (
     <Stack.Navigator initialRouteName="Calendar">
-      <Stack.Screen name="Calendar" component={Calendar}/>
-      <Stack.Screen name="Calendar Item" component={CalendarItem}/>
+      <Stack.Screen name="Calendar" component={Calendar} />
+      <Stack.Screen name="Calendar Item" component={CalendarItem} />
     </Stack.Navigator>
   );
 }
@@ -57,10 +64,10 @@ function CalendarStack() {
 function ProfileStack() {
   return (
     <Stack.Navigator initialRouteName="User Profile">
-      <Stack.Screen name="User Profile" component={UserProfile}/>
-      <Stack.Screen name="Achievements" component={Achievements}/>
-      <Stack.Screen name="Friends" component={Friends}/>
-      <Stack.Screen name="Store" component={Store}/>
+      <Stack.Screen name="User Profile" component={UserProfile} />
+      <Stack.Screen name="Achievements" component={Achievements} />
+      <Stack.Screen name="Friends" component={Friends} />
+      <Stack.Screen name="Store" component={Store} />
     </Stack.Navigator>
   );
 }
@@ -68,7 +75,7 @@ function ProfileStack() {
 function SettingsStack() {
   return (
     <Stack.Navigator initialRouteName="Settings">
-      <Stack.Screen name="Settings" component={Settings}/>
+      <Stack.Screen name="Settings" component={Settings} />
     </Stack.Navigator>
   );
 }
@@ -77,7 +84,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator initialRouteName="Feed">
-      <Tab.Screen
+        <Tab.Screen
           name="Home Stack"
           component={HomeStack}
           options={{
@@ -90,8 +97,8 @@ export default function App() {
                 size={size}
               />
             ),
-          }}  />
-      <Tab.Screen
+          }} />
+        <Tab.Screen
           name="CourseStack"
           component={CourseStack}
           options={{
@@ -104,8 +111,8 @@ export default function App() {
                 size={size}
               />
             ),
-          }}  />
-      <Tab.Screen
+          }} />
+        <Tab.Screen
           name="CalendarStack"
           component={CalendarStack}
           options={{
@@ -118,8 +125,8 @@ export default function App() {
                 size={size}
               />
             ),
-          }}  />
-      <Tab.Screen
+          }} />
+        <Tab.Screen
           name="ProfileStack"
           component={ProfileStack}
           options={{
@@ -132,7 +139,7 @@ export default function App() {
                 size={size}
               />
             ),
-          }}  />
+          }} />
         <Tab.Screen
           name="SettingsStack"
           component={SettingsStack}
