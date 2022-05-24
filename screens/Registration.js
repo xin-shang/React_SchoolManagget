@@ -1,5 +1,5 @@
 import { TouchableOpacity, StyleSheet, Text, View, Platform, TextInput } from 'react-native';
-import { Button } from 'react-native-web';
+import { Button } from 'react-native';
 
 const Registration = () => {
     return (

@@ -6,10 +6,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import HomeScreen from './components/HomeScreen';
-import SettingsScreen from './components/SettingsScreen';
-import Registration from './components/Registration';
-import UserProfile from './components/UserProfile';
+import HomeScreen from './screens/HomeScreen';
+import SettingsScreen from './screens/SettingsScreen';
+import Registration from './screens/Registration';
+import UserProfile from './screens/UserProfile';
+import AccRecovery from './screens/AccRecovery';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -72,6 +73,7 @@ function RegistrationStack(){
  
 function App() {
   return (
+    
     <NavigationContainer>
       <Tab.Navigator
         initialRouteName="Feed"
@@ -96,6 +98,19 @@ function App() {
           component={SettingsStack}
           options={{
             tabBarLabel: 'Settings',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons
+                name="cog"
+                color={color}
+                size={size}
+              />
+            ),
+          }} />
+          <Tab.Screen
+          name="RegistrationStack"
+          component={RegistrationStack}
+          options={{
+            tabBarLabel: 'Registration',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
                 name="cog"
