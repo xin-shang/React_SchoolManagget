@@ -1,46 +1,36 @@
-// React Native Bottom Navigation
-// https://aboutreact.com/react-native-bottom-navigation/
- 
-import * as React from 'react';
-import { View, Text, SafeAreaView } from 'react-native';
- 
-const UserProfile = () => {
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView, StyleSheet, View, Button } from 'react-native';
+
+const UserProfile = ({ navigation }) => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ flex: 1, padding: 16 }}>
-        <View
-          style={{
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <Text
-            style={{
-              fontSize: 25,
-              textAlign: 'center',
-              marginBottom: 16
-            }}>
-            You are on Profile Screen
-          </Text>
-        </View>
-        <Text
-          style={{
-            fontSize: 18,
-            textAlign: 'center',
-            color: 'grey'
-          }}>
-          React Native Bottom Navigation
-        </Text>
-        <Text
-          style={{
-            fontSize: 16,
-            textAlign: 'center',
-            color: 'grey'
-          }}>
-          www.aboutreact.com
-        </Text>
+    <SafeAreaView
+      style={{
+      backgroundColor: "#fff",
+      flex: 1,
+      //flexDirection: "row",
+      //justifyContent: "center",
+      //alignItems: "center"
+    }}>
+      <View style={{
+        backgroundColor: "#fff",
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center"
+        }}>
+          <Button title="Achievements" onPress={() => navigation.navigate('Achievements')}/>
+          <Button title="Friends" onPress={() => navigation.navigate('Friends')}/>
+          <Button title="Store" onPress={() => navigation.navigate('Store')}/>
       </View>
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    //alignItems: 'center',
+    //justifyContent: 'center',
+  },
+});
 export default UserProfile;
