@@ -2,16 +2,18 @@ import { TouchableOpacity, StyleSheet, Text, View, Platform, TextInput } from 'r
 
 const Registration = ({ navigation }) => {
     return (
-        <View style={styles.signupWrapper}>
-            <Text style={styles.sectionTitle}>SIGN UP</Text>
+        <View style={styles.loginWrapper}>
+            <Text style={styles.sectionTitle}>ACCOUNT RECOVERY</Text>
             <View style={styles.sectionContent}>
                 <Text style={styles.sectionSubTitle}>Email</Text>
                 <TextInput style={styles.input} />
-                <Text style={styles.sectionSubTitle}>Password</Text>
-                <TextInput secureTextEntry={true} style={styles.input} />
+                <Text>
+                    An email will be sent to you with instruction on how to recover your account. 
+                    Please follow the instruction to recover your account
+                </Text>
                 <TouchableOpacity style={styles.sectionSubmit}>
                     <View>
-                        <Text style={styles.submit}>SIGN UP</Text>
+                        <Text style={styles.submit}>SEND</Text>
                     </View>
                 </TouchableOpacity>
                 <View style={styles.registeredWrapper}>
@@ -26,7 +28,7 @@ const Registration = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
-    signupWrapper: {
+    loginWrapper: {
         paddingTop: 80,
         paddingHorizontal: 30,
     },
@@ -64,7 +66,7 @@ const styles = StyleSheet.create({
         color: "#ffffff",
         fontSize: 22,
     },
-    registeredWrapper: {
+    registerWrapper: {
         marginTop: 40,
         width: '100%',
         flexDirection: 'row',
@@ -74,7 +76,7 @@ const styles = StyleSheet.create({
     clickHereWrapper: {
         marginLeft: 15,
     },
-    sectionRegistered: {
+    sectionRegister: {
         paddingVertical: 15,
         fontSize: 22,
     },
@@ -87,4 +89,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default Registration;
+export default AccRecovery;
