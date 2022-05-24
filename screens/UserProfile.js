@@ -21,6 +21,7 @@ const UserProfile = ({ navigation }) => {
           <Button title="Friends" onPress={() => navigation.navigate('Friends')}/>
           <Button title="Store" onPress={() => navigation.navigate('Store')}/>
       </View>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
