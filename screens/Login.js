@@ -1,30 +1,29 @@
-import { TouchableOpacity, StyleSheet, Text, View, Platform, TextInput } from 'react-native';
+import { View, Button, TouchableOpacity, StyleSheet, Text, Platform, TextInput } from 'react-native';
 
-const Login = () => {
+const Login = ({ navigation }) => {
     return (
         <View style={styles.loginWrapper}>
-            <Text style={styles.sectionTitle}>LOGIN</Text>
-            <View style={styles.sectionContent}>
-                <Text style={styles.sectionSubTitle}>Email</Text>
-                <TextInput style={styles.input} />
-                <Text style={styles.sectionSubTitle}>Password</Text>
-                <TextInput secureTextEntry={true} style={styles.input} />
-                <TouchableOpacity style={styles.sectionSubmit}>
-                    <View>
-                        <Text style={styles.submit}>LOGIN</Text>
-                    </View>
-                </TouchableOpacity>
-                <View style={styles.registerWrapper}>
-                    <Text style={styles.sectionRegister}>Not Yet Registered?</Text>
-                    <TouchableOpacity style={styles.clickHereWrapper}>
-                        <Text style={styles.sectionClickHere}>SIGN UP</Text>
-                    </TouchableOpacity>
+        <Text style={styles.sectionTitle}>LOGIN</Text>
+        <View style={styles.sectionContent}>
+            <Text style={styles.sectionSubTitle}>Email</Text>
+            <TextInput style={styles.input} />
+            <Text style={styles.sectionSubTitle}>Password</Text>
+            <TextInput secureTextEntry={true} style={styles.input} />
+            <TouchableOpacity style={styles.sectionSubmit} title="Home" onPress={() => navigation.navigate('Home')}>
+                <View>
+                    <Text style={styles.submit}>LOGIN</Text>
                 </View>
+            </TouchableOpacity>
+            <View style={styles.registerWrapper}>
+                <Text style={styles.sectionRegister}>Not Yet Registered?</Text>
+                <TouchableOpacity style={styles.clickHereWrapper} title="Register" onPress={() => navigation.navigate('Registration')}>
+                    <Text style={styles.sectionClickHere}>SIGN UP</Text>
+                </TouchableOpacity>
             </View>
         </View>
-    )
+    </View>
+    );
 }
-
 const styles = StyleSheet.create({
     loginWrapper: {
         paddingTop: 80,
