@@ -14,11 +14,6 @@ const Login = ({ navigation }) => {
                     <Text style={styles.submit}>LOGIN</Text>
                 </View>
             </TouchableOpacity>
-            <View style={styles.recoveryWrapper}>
-                <TouchableOpacity style={styles.recoveryClickHereWrapper} title="AccRecovery" onPress={() => navigation.navigate('AccRecovery')}>
-                        <Text style={styles.sectionClickHere}>Forgot Password?</Text>
-                    </TouchableOpacity>
-            </View>
             <View style={styles.registerWrapper}>
                 <Text style={styles.sectionRegister}>Not Yet Registered?</Text>
                 <TouchableOpacity style={styles.clickHereWrapper} title="Register" onPress={() => navigation.navigate('Registration')}>
@@ -68,13 +63,8 @@ const styles = StyleSheet.create({
         color: "#ffffff",
         fontSize: 22,
     },
-    recoveryWrapper: {
-        width: '100%',
-        flexDirection: "row",
-        justifyContent: "flex-end"
-    },
     registerWrapper: {
-        marginTop: 10,
+        marginTop: 40,
         width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
