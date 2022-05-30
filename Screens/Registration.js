@@ -16,7 +16,7 @@ const Registration = ({ navigation }) => {
                 </TouchableOpacity>
                 <View style={styles.registeredWrapper}>
                     <Text style={styles.sectionRegistered}>Already Registered?</Text>
-                    <TouchableOpacity style={styles.clickHereWrapper}>
+                    <TouchableOpacity style={styles.clickHereWrapper} title="Login" onPress={() => navigation.navigate('Login')}>
                         <Text style={styles.sectionClickHere}>LOGIN</Text>
                     </TouchableOpacity>
                 </View>

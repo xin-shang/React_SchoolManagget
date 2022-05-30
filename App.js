@@ -6,18 +6,19 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Registration from './Screens/Registration';
-import Login from './Screens/Login'
-import CoursePage from './Screens/CoursePage'
-import UserProfile from './Screens/UserProfile'
-import Home from './Screens/Home'
-import CourseSelect from './Screens/CourseSelect'
-import Achievements from './Screens/Achievements'
-import Friends from './Screens/Friends'
-import Store from './Screens/Store'
-import Calendar from './Screens/Calendar'
-import CalendarItem from './Screens/CalendarItem'
-import StudyTimer from './Screens/StudyTimer'
-import Settings from './Screens/Settings'
+import Login from './Screens/Login';
+import AccRecovery from './Screens/AccRecovery';
+import CoursePage from './Screens/CoursePage';
+import UserProfile from './Screens/UserProfile';
+import Home from './Screens/Home';
+import CourseSelect from './Screens/CourseSelect';
+import Achievements from './Screens/Achievements';
+import Friends from './Screens/Friends';
+import Store from './Screens/Store';
+import Calendar from './Screens/Calendar';
+import CalendarItem from './Screens/CalendarItem';
+import StudyTimer from './Screens/StudyTimer';
+import Settings from './Screens/Settings';
 
 import StudyTimer1 from './Screens/StudyTimer1';
 import StudyTimer2 from './Screens/StudyTimer2';
@@ -32,6 +33,7 @@ function HomeStack() {
     <Stack.Navigator initialRouteName="Login">
       <Stack.Screen name="Registration" component={Registration} />
       <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="AccRecovery" component={AccRecovery} />
       <Stack.Screen name="Home" component={Home} />
 
       {/* Might move to a different screen */}

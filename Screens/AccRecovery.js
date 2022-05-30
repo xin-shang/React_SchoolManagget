@@ -1,6 +1,6 @@
 import { TouchableOpacity, StyleSheet, Text, View, Platform, TextInput } from 'react-native';
 
-const AccRecovery = () => {
+const AccRecovery = ({ navigation }) => {
     return (
         <View style={styles.loginWrapper}>
             <Text style={styles.sectionTitle}>ACCOUNT RECOVERY</Text>
@@ -13,7 +13,7 @@ const AccRecovery = () => {
                 </Text>
                 <TouchableOpacity style={styles.sectionSubmit}>
                     <View>
-                        <Text style={styles.submit}>SEND</Text>
+                        <Text style={styles.submit} title="Login" onPress={() => navigation.navigate('Login')}>SEND</Text>
                     </View>
                 </TouchableOpacity>
             </View>
