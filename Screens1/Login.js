@@ -1,9 +1,9 @@
-import { View, Button, TouchableOpacity, StyleSheet, Text, Platform, TextInput } from 'react-native';
+import { View, TouchableOpacity, StyleSheet, Text, TextInput } from 'react-native';
 
 const Login = ({ navigation }) => {
     return (
         <View style={styles.loginWrapper}>
-        <Text style={styles.sectionTitle}>LOGIN</Text>
+            <Text style={styles.sectionTitle}>LOGIN</Text>
         <View style={styles.sectionContent}>
             <Text style={styles.sectionSubTitle}>Email</Text>
             <TextInput style={styles.input} />
