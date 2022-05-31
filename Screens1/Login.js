@@ -16,13 +16,13 @@ const Login = ({ navigation }) => {
             </TouchableOpacity>
             <View style={styles.recoveryWrapper}>
                 <TouchableOpacity style={styles.recoveryClickHereWrapper} title="AccRecovery" onPress={() => navigation.navigate('AccRecovery')}>
-                        <Text style={styles.sectionClickHere}>Forgot Password?</Text>
+                        <Text style={styles.sectionRecoveryClickHere}>Forgot Password?</Text>
                     </TouchableOpacity>
             </View>
             <View style={styles.registerWrapper}>
                 <Text style={styles.sectionRegister}>Not Yet Registered?</Text>
                 <TouchableOpacity style={styles.clickHereWrapper} title="Register" onPress={() => navigation.navigate('Registration')}>
-                    <Text style={styles.sectionClickHere}>SIGN UP</Text>
+                    <Text style={styles.sectionRegisterClickHere}>SIGN UP</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -31,7 +31,7 @@ const Login = ({ navigation }) => {
 }
 const styles = StyleSheet.create({
     loginWrapper: {
-        paddingTop: 80,
+        paddingTop: 20,
         paddingHorizontal: 30,
     },
     sectionTitle: {
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     sectionContent: {
-        paddingTop: 50,
+        paddingTop: 20,
     },
     sectionSubTitle: {
         fontSize: 30,
@@ -73,6 +73,13 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "flex-end"
     },
+    sectionRecoveryClickHere: {
+        paddingVertical: 15,
+        fontSize: 15,
+        fontWeight: 'bold',
+        textDecorationLine: 'underline',
+        color: '#0052A0',
+    },
     registerWrapper: {
         marginTop: 10,
         width: '100%',
@@ -87,7 +94,7 @@ const styles = StyleSheet.create({
         paddingVertical: 15,
         fontSize: 22,
     },
-    sectionClickHere: {
+    sectionRegisterClickHere: {
         paddingVertical: 15,
         fontSize: 22,
         fontWeight: 'bold',

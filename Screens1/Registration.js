@@ -27,7 +27,7 @@ const Registration = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     signupWrapper: {
-        paddingTop: 80,
+        paddingTop: 20,
         paddingHorizontal: 30,
     },
     sectionTitle: {
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     sectionContent: {
-        paddingTop: 50,
+        paddingTop: 20,
     },
     sectionSubTitle: {
         fontSize: 30,
