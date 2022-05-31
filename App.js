@@ -5,25 +5,25 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import Registration from './screens/Registration';
-import Login from './screens/Login';
-import AccRecovery from './screens/AccRecovery';
-import CoursePage from './screens/CoursePage';
-import UserProfile from './screens/UserProfile';
-import Home from './screens/Home';
-import CourseSelect from './screens/CourseSelect';
-import Achievements from './screens/Achievements';
-import Friends from './screens/Friends';
-import Store from './screens/Store';
-import Calendar from './screens/Calendar';
-import CalendarItem from './screens/CalendarItem';
-import StudyTimer from './screens/StudyTimer';
-import Settings from './screens/Settings';
+import Registration from './Screens1/Registration';
+import Login from './Screens1/Login';
+import AccRecovery from './Screens1/AccRecovery';
+import CoursePage from './Screens1/CoursePage';
+import UserProfile from './Screens1/UserProfile';
+import Home from './Screens1/Home';
+import CourseSelect from './Screens1/CourseSelect';
+import Achievements from './Screens1/Achievements';
+import Friends from './Screens1/Friends';
+import Store from './Screens1/Store';
+import Calendar from './Screens1/Calendar';
+import CalendarItem from './Screens1/CalendarItem';
+import StudyTimer from './Screens1/StudyTimer';
+import Settings from './Screens1/Settings';
 
-import StudyTimer1 from './screens/StudyTimer1';
-import StudyTimer2 from './screens/StudyTimer2';
-import StudyTimer3 from './screens/StudyTimer3';
-import TimerSelector from './screens/TimerSelector'
+import StudyTimer1 from './Screens1/StudyTimer1';
+import StudyTimer2 from './Screens1/StudyTimer2';
+import StudyTimer3 from './Screens1/StudyTimer3';
+import TimerSelector from './Screens1/TimerSelector'
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
