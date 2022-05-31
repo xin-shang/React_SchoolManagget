@@ -17,10 +17,10 @@ function Calendar () {
       <>
       <ScrollView>
         
-        {/*日历的上半部分 日历主体 The top half of the calendar, calendar subject.*/}
+        {/*The top half of the calendar, calendar subject.*/}
         <View style = {styles.box_TopScreen}>
           
-          {/*选择年份，选择月份，返回当今日 Select year, select month, return to today*/}
+          {/*Select year, select month, return to today*/}
           <View style = {styles.box_TopHeader}>
             {/**
              * Butten_1 Select year
@@ -33,9 +33,9 @@ function Calendar () {
               onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
               <Picker.Item label="Java" value="java" />
               <Picker.Item label="JavaScript" value="js" />
-              -- ModalDropdown       onDropdownWillShow={() => {this.setState({typeShow:true})}}      //按下按钮显示按钮时触发
-              -- ModalDropdown       onDropdownWillHide={() => this.setState({typeShow:false})}    //当下拉按钮通过触摸按钮隐藏时触发
-              -- ModalDropdown       onSelect={this._selectType}    //当选项行与选定的index 和 value 接触时触发
+              -- ModalDropdown       onDropdownWillShow={() => {this.setState({typeShow:true})}}      
+              -- ModalDropdown       onDropdownWillHide={() => this.setState({typeShow:false})}    
+              -- ModalDropdown       onSelect={this._selectType}    
 
             </Picker> */}
             
@@ -82,7 +82,7 @@ function Calendar () {
 
           <View style = {styles.line_1}></View>
 
-          {/*日期主体，横5纵7 Date body, horizontal 5 vertical 7*/}
+          {/*Date body, horizontal 5 vertical 7*/}
           <View style = {styles.box_DateBody}>
 
             <Table style = {styles.box_Week}>
@@ -112,7 +112,7 @@ function Calendar () {
 
         <View style = {styles.line_2}></View>
 
-        {/*日历的下半部分,被选中天的详细信息  The lower half of the calendar, Details of the selected day.*/}
+        {/*The lower half of the calendar, Details of the selected day.*/}
         <View style = {styles.box_LowerScreen}>
           <Text style = {styles.text_3}>01 Jun 2022   Wednesday</Text>
           <Text style = {styles.text_4}>Task 1:</Text>
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       width: pxToDp_W(385),
       height: pxToDp_H(60),
-      //学校校徽的蓝色 The school emblem's blue
+      // The school emblem's blue
       backgroundColor: "#000090",
       borderRadius: 8,
       marginLeft: 'auto',
@@ -241,7 +241,7 @@ const styles = StyleSheet.create({
       marginRight: 'auto',
   },
 
-  // 下拉选择框效果
+  // Drop down selection box effect
   dropdown_Button:
   {
       width: pxToDp_W(80),
@@ -255,14 +255,14 @@ const styles = StyleSheet.create({
       alignItems: 'center'
   },
 
-  // 下拉框 效果
+  // Drop down box effect
   select_Box: 
   {
       width: pxToDp_W(80),
       height:pxToDp_H(260),
   },
 
-  // 文字效果
+  // Text Effects
   textSet:
   {
       fontSize: 12,
@@ -270,7 +270,7 @@ const styles = StyleSheet.create({
       fontWeight: 'bold'
   },
 
-  // 与月份有关的三个组件的集合
+  // A collection of three components associated with the month
   mounth_Button:
   {
       flexDirection: 'row',
@@ -283,7 +283,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center'
   },
 
-  // 上个月和下个月的按钮效果
+  // Last month and next month's button effect
   LR_Button: 
   {
       width: pxToDp_W(30),
