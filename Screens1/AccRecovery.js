@@ -13,7 +13,7 @@ const AccRecovery = ({ navigation }) => {
                 </Text>
                 <TouchableOpacity style={styles.sectionSubmit}>
                     <View>
-                        <Text style={styles.submit} title="Login" onPress={() => navigation.navigate('Login')}>SEND</Text>
+                        <Text style={styles.submit} title="login" onPress={() => navigation.navigate('Login')}>SEND</Text>
                     </View>
                 </TouchableOpacity>
             </View>
