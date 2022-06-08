@@ -21,6 +21,9 @@ import StudyTimer2 from './Screens/StudyTimer2';
 import StudyTimer3 from './Screens/StudyTimer3';
 import TimerSelector from './Screens/TimerSelector';
 
+import { LogBox } from 'react-native';
+LogBox.ignoreAllLogs();//Ignore all log notifications
+
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
