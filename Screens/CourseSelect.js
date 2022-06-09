@@ -38,7 +38,7 @@ const CourseSelect = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <LoadCourses />
-            <Button title="Show dialog" onPress={showDialog} />
+            <Button title="Add Course" onPress={showDialog} />
             <Dialog.Container visible={visible}>
                 <Dialog.Title>Add Course</Dialog.Title>
                 <Dialog.Description>
