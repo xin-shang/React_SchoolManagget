@@ -16,7 +16,6 @@ import Friends from './Screens/Friends'
 import Store from './Screens/Store'
 import Calendar from './Screens/Calendar'
 import CalendarItem from './Screens/CalendarItem'
-import StudyTimer from './Screens/StudyTimer'
 import Settings from './Screens/Settings'
 
 import StudyTimer1 from './Screens/StudyTimer1';
