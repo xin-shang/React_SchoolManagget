@@ -21,13 +21,15 @@ import StudyTimer2 from './Screens/StudyTimer2';
 import StudyTimer3 from './Screens/StudyTimer3';
 import TimerSelector from './Screens/TimerSelector';
 
-import { LogBox } from 'react-native';
-LogBox.ignoreAllLogs();//Ignore all log notifications
 
+//Create the base objects for using the Stack Navigator
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
+
+//Create each stack that holds the screens together when navigating
+//to that page. 
 function HomeStack() {
   return (
     <Stack.Navigator initialRouteName="Login">
@@ -73,6 +75,9 @@ function ProfileStack() {
   );
 }
 
+
+//Add the bottom tabs that display each tab across the bottom of the app. 
+//Each will call on the relevant stack and open the respective screen. 
 
 export default function App() {
   return (
