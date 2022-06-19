@@ -3,7 +3,7 @@ import { Text, View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
 export default class CourseCard extends Component {
-  
+  // Setting up props
   constructor(props) {
     super(props);
   }
@@ -27,6 +27,7 @@ export default class CourseCard extends Component {
               borderBottomLeftRadius: 10,
               borderTopLeftRadius: 10
             }}>
+              {/* Title of course card */}
               <View style={{paddingLeft: 3, paddingTop: 3}}>
                 <Text style={styles.datefont}>{ this.props.title }</Text>
               </View>
@@ -39,9 +40,11 @@ export default class CourseCard extends Component {
               backgroundColor: "#edf1f9",
               flex: 1
             }}>
+              {/* Day on course card */}
               <View style={{alignItems: "center", justifyContent: "flex-end", flex: 1}}>
                 <Text style={styles.datefont}>{ this.props.day }</Text>
               </View>
+              {/* Month on course card */}
               <View style={{alignItems: "center", justifyContent: "flex-start", flex: 1}}>
                 <Text style={styles.datefont}>{ this.props.month }</Text>
               </View>
@@ -68,5 +71,5 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
  });
-
+// Definition of the props used in the card. Variables that are passed in from outside of class
 CourseCard.propTypes = { title: PropTypes.string.isRequired, body: PropTypes.string.isRequired, day: PropTypes.string.isRequired, month: PropTypes.string.isRequired, time: PropTypes.string.isRequired };
