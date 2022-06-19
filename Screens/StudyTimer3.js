@@ -3,12 +3,16 @@ import { Text, View, StyleSheet, Button, TextInput, useState } from 'react-nativ
 import Constants from 'expo-constants';
 import { CountdownCircleTimer } from 'react-native-countdown-circle-timer';
 
-
+//Default constants for the timer. 
+// 10800 seconds equates to 3 hours.
 
 const StudyTimer3 = ({navigation}) => {
   const [isPlaying, setIsPlaying] = React.useState(false)
   const [secondsLeft] = React.useState(10800);
 
+
+//Displays the circle timer and changes colour at specific intervals.
+//Uses math function to convert from seconds into Hours : Minutes : Seconds
 
   return (
     <View style= {styles.container}>
