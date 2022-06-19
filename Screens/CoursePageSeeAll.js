@@ -18,10 +18,13 @@ const CoursePageSeeAll = ({ navigation }) => {
         //justifyContent: "center",
         width: "100%"
         }}>
+          {/* Collapsable menu */}
           <Collapse style={styles.collapse}>
+            {/* Menu title */}
             <CollapseHeader>
               <Text style={styles.collapseheading}>This Week:</Text>
             </CollapseHeader>
+            {/* Body Containing course cards */}
             <CollapseBody>
               <ScrollView>
                 <CourseCard title="Testing" body="Some longer body text" day="14" month="Apr" time="2230"/>
@@ -29,11 +32,16 @@ const CoursePageSeeAll = ({ navigation }) => {
               </ScrollView>
             </CollapseBody>
           </Collapse>
+
+          {/* Collapsable Menu */}
           <Collapse style={styles.collapse}>
+            {/* Menu Title */}
             <CollapseHeader>
               <Text style={styles.collapseheading}>Tasks:</Text>
             </CollapseHeader>
+            {/* Body containing course cards */}
             <CollapseBody>
+            {/* Testing scroll view with lots of course cards */}
               <ScrollView style={{height: "90%"}}>
                 <CourseCard title="Test1" body="Some longer body text" day="14" month="Apr" time="2230"/>
                 <CourseCard title="Test2" body="More body" day="22" month="Jan" time="2215"/>
@@ -53,7 +61,6 @@ const CoursePageSeeAll = ({ navigation }) => {
             </CollapseBody>
           </Collapse>
       </View>
-      <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
