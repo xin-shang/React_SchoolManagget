@@ -9,18 +9,21 @@ const Login = ({ navigation }) => {
             <TextInput style={styles.input} />
             <Text style={styles.sectionSubTitle}>Password</Text>
             <TextInput secureTextEntry={true} style={styles.input} />
+            {/* Navigate to Home page after validating login details */}
             <TouchableOpacity style={styles.sectionSubmit} title="Home" onPress={() => navigation.navigate('Home')}>
                 <View>
                     <Text style={styles.submit}>LOGIN</Text>
                 </View>
             </TouchableOpacity>
             <View style={styles.recoveryWrapper}>
+                {/* Navigate to AccRecovery page */}
                 <TouchableOpacity style={styles.recoveryClickHereWrapper} title="AccRecovery" onPress={() => navigation.navigate('AccRecovery')}>
                         <Text style={styles.sectionRecoveryClickHere}>Forgot Password?</Text>
                     </TouchableOpacity>
             </View>
             <View style={styles.registerWrapper}>
                 <Text style={styles.sectionRegister}>Not Yet Registered?</Text>
+                {/* Navigate to Registration page */}
                 <TouchableOpacity style={styles.clickHereWrapper} title="Register" onPress={() => navigation.navigate('Registration')}>
                     <Text style={styles.sectionRegisterClickHere}>SIGN UP</Text>
                 </TouchableOpacity>

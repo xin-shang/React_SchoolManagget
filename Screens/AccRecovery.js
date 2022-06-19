@@ -11,17 +11,12 @@ const Registration = ({ navigation }) => {
                     An email will be sent to you with instruction on how to recover your account. 
                     Please follow the instruction to recover your account
                 </Text>
+                {/* An email should be send to the user with a link to reset their account password (not implemented) */}
                 <TouchableOpacity style={styles.sectionSubmit}>
                     <View>
                         <Text style={styles.submit}>SEND</Text>
                     </View>
                 </TouchableOpacity>
-                <View style={styles.registeredWrapper}>
-                    <Text style={styles.sectionRegistered}>Already Registered?</Text>
-                    <TouchableOpacity style={styles.clickHereWrapper}>
-                        <Text style={styles.sectionClickHere}>LOGIN</Text>
-                    </TouchableOpacity>
-                </View>
             </View>
         </View>
     )
@@ -65,27 +60,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: "#ffffff",
         fontSize: 22,
-    },
-    registerWrapper: {
-        marginTop: 40,
-        width: '100%',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    clickHereWrapper: {
-        marginLeft: 15,
-    },
-    sectionRegister: {
-        paddingVertical: 15,
-        fontSize: 22,
-    },
-    sectionClickHere: {
-        paddingVertical: 15,
-        fontSize: 22,
-        fontWeight: 'bold',
-        textDecorationLine: 'underline',
-        color: '#0052A0',
     },
 })
 

@@ -9,6 +9,7 @@ const Registration = ({ navigation }) => {
                 <TextInput style={styles.input} />
                 <Text style={styles.sectionSubTitle}>Password</Text>
                 <TextInput secureTextEntry={true} style={styles.input} />
+                {/* If the account does not exist, create an account base on the registration details */}
                 <TouchableOpacity style={styles.sectionSubmit}>
                     <View>
                         <Text style={styles.submit}>SIGN UP</Text>
@@ -16,6 +17,7 @@ const Registration = ({ navigation }) => {
                 </TouchableOpacity>
                 <View style={styles.registeredWrapper}>
                     <Text style={styles.sectionRegistered}>Already Registered?</Text>
+                    {/* Navigate to Login page */}
                     <TouchableOpacity style={styles.clickHereWrapper}>
                         <Text style={styles.sectionClickHere}>LOGIN</Text>
                     </TouchableOpacity>
