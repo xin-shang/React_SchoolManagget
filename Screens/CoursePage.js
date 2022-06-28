@@ -1,11 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, View, Text, ScrollView } from 'react-native';
-import {Collapse,CollapseHeader, CollapseBody} from 'accordion-collapse-react-native';
 
+// Importing the custom course card from the components folder
 import CourseCard from '../components/CourseCard';
 
 const CoursePage = ({ navigation }) => {
   return (
+    // Creation of a view that won't allow content to will avoid notches
+    // Currently bugged on android so padding has been applied
     <SafeAreaView 
       style={{
       backgroundColor: "#0052a0",
@@ -50,13 +51,12 @@ const CoursePage = ({ navigation }) => {
     </SafeAreaView>
   );
 }
-// Style sheets to format the screen
+
+// Definition of the style sheet
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    //alignItems: 'center',
-    //justifyContent: 'center',
   },
   headingcontainer: {
     flexDirection: "row",

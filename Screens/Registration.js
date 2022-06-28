@@ -1,5 +1,14 @@
 import { TouchableOpacity, StyleSheet, Text, View, Platform, TextInput } from 'react-native';
 
+/*
+
+Basic layout of how a registration page would look. 
+Buttons that correspond to each function of the app. However, due to the lack
+of a database, the inputs themselves do nothing and function merely as placeholders
+rather than relevant buttons. 
+
+*/
+
 const Registration = ({ navigation }) => {
     return (
         <View style={styles.signupWrapper}>

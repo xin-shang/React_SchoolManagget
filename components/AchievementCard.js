@@ -20,7 +20,6 @@ export default class AchiecvementCard extends Component {
   const styles = StyleSheet.create({
     achievementIcon: {
       borderRadius: 10,
-      
     },
    });
   

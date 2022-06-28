@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, View, Text, Button} from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import * as React from 'react';
 import { Avatar } from 'react-native-paper';
 

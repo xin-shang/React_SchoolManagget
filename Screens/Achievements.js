@@ -2,6 +2,20 @@ import { View,StyleSheet,Text } from 'react-native';
 
 import AchiecvementCard from '../components/AchievementCard';
 
+/*
+
+Motivational message diplayed at the top based on current achievements earned
+out of total achievements. 
+
+The message changes at certain intervals. 
+(Note: These values are hardcoded and won't change while the application is running)
+
+All available achievements are displayed on the screen, clicking on them will display the
+current level of achievement and whether there is additional levels to earn. 
+(Note: All pictures are hardcoded and none are integrated as buttons)
+
+*/
+
 const Achievements = ({ navigation }) => {
     return (
     <View>

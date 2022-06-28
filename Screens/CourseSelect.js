@@ -35,8 +35,6 @@ const CourseSelect = ({ navigation }) => {
     // Should add the course to the course list. Unimplemented
     const handleSumbit = () => {
         // ...Your logic
-        //console.log(this.state.text)
-        //courses.push(this.state.text)
         setVisible(false);
     };
 

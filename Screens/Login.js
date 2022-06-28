@@ -1,5 +1,16 @@
 import { View, TouchableOpacity, StyleSheet, Text, TextInput } from 'react-native';
 
+/*
+
+Functions are the base page for the application to be opened at. Only has buttons 
+that currently don't offer functionality as there isn't a check for user input. 
+Clicking sign in will navigate the user straight to the home screen. 
+
+Normally this would incur a validation check on input and then if correct, would allow
+the user access to the application. 
+
+*/
+
 const Login = ({ navigation }) => {
     return (
         <View style={styles.loginWrapper}>

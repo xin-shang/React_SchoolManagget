@@ -1,6 +1,12 @@
 import React from 'react';
 import { Text, View, StyleSheet, Button, TextInput, useState } from 'react-native';
 
+/*
+Use of the navigator to add the selector to the stack. 
+Use the style sheet to add a background color (Hexadecimal codes also work).
+The buttons allow access to each of the timer screens. When pressed it automatically
+navigates there.
+*/
 
 const TimerSelector = ({ navigation }) => {
     return (

@@ -11,8 +11,25 @@ import { pxToDp, pxToDp_H, pxToDp_W } from '../tools/PixelTransform';
 // import Img_Bill from '../res/Bill.png'
 // import Img_Car from '../res/Car.png'
 
+/*
 
-// 
+Part 1 covers the view port that displays icons and variables attached to current available currency, 
+favourited items, the shopping cart with relevant items and the total shopping
+amount. 
+Each value is hardcoded due to no data being linked to the profiles. 
+
+Part 2 relates to the search function of the application. It takes user input as a string and compares it
+with available items in the store. As above, it is merely a placeholder value that doesn't actually search actual
+items. 
+
+Part 3 is the store itself and a showcase of each item available. Each product has a name, description and a price. The "Buy Now"
+button will add the item to the user's account if their balance is high enough to purchase it. The item will then be removed from the
+store as it is already owned. 
+(Note: All values and buttons are purely placeholders. They offer no functionality other than a display of what the store would look
+  like if it was integrated fully. )
+
+*/
+
 function InGameStore () {
     return (
       <>

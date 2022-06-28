@@ -1,5 +1,7 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
+
+// Importing prop types to allow the definition of prop values
 import PropTypes from 'prop-types';
 
 export default class CourseCard extends Component {
@@ -9,7 +11,6 @@ export default class CourseCard extends Component {
   }
 
   render() {
-    
     return(
       <View style={{
         marginTop: 5,
@@ -49,6 +50,7 @@ export default class CourseCard extends Component {
                 <Text style={styles.datefont}>{ this.props.month }</Text>
               </View>
             </View>
+            {/* View and styling for checkmark */}
             <View style={{
               backgroundColor: "#edf1f9",
               flex: .5,
@@ -65,11 +67,13 @@ export default class CourseCard extends Component {
   }
 }
 
+// Definition of stylesheet
 const styles = StyleSheet.create({
   datefont: {
     fontWeight: "bold",
     fontSize: 20,
   },
  });
+
 // Definition of the props used in the card. Variables that are passed in from outside of class
 CourseCard.propTypes = { title: PropTypes.string.isRequired, body: PropTypes.string.isRequired, day: PropTypes.string.isRequired, month: PropTypes.string.isRequired, time: PropTypes.string.isRequired };

@@ -1,11 +1,13 @@
-import { TouchableOpacity, StyleSheet, Text, View, Platform, TextInput } from 'react-native';
+import { TouchableOpacity, StyleSheet, Text, View, TextInput } from 'react-native';
 
-const Registration = ({ navigation }) => {
+const AccRecovery = ({ navigation }) => {
     return (
         <View style={styles.loginWrapper}>
             <Text style={styles.sectionTitle}>ACCOUNT RECOVERY</Text>
             <View style={styles.sectionContent}>
                 <Text style={styles.sectionSubTitle}>Email</Text>
+                {/* Textbox to collect user input
+                    It currently doesn't store or use the users input */}
                 <TextInput style={styles.input} />
                 <Text>
                     An email will be sent to you with instruction on how to recover your account. 
@@ -21,7 +23,7 @@ const Registration = ({ navigation }) => {
         </View>
     )
 }
-
+// Definition of style scheets
 const styles = StyleSheet.create({
     loginWrapper: {
         paddingTop: 80,

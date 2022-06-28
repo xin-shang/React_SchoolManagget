@@ -1,6 +1,16 @@
 import { View, Button, Text, StyleSheet } from 'react-native';
 import CourseCard from '../components/CourseCard'
 
+/*
+
+The home page is the main hub for each user. 
+The base view method displays upcoming assignments and tasks. These are hardcoded as they
+require database functionality to automatically update as tasks get completed. 
+
+There are two buttons to allow users to go to the Store and the Study Timer. 
+
+*/
+
 const Home = ({ navigation }) => {
     return (
     <View style={{
@@ -28,6 +38,12 @@ const Home = ({ navigation }) => {
     </View>
     );
 }
+/*
+
+Basic style sheet that allows the buttons and text to be stylised
+correctly on the page without overlap
+
+*/
 
 const styles = StyleSheet.create({
     headings: {

@@ -3,14 +3,37 @@ import {View, TouchableOpacity, Text} from 'react-native';
 import {Agenda} from 'react-native-calendars';
 import {Card, Avatar} from 'react-native-paper';
 
+/*
+Converts the time into a string to be read by the Calendar 
+*/
 
 const timeToString = (time) => {
   const date = new Date(time);
   return date.toISOString().split('T')[0];
 };
 
+/*
+
+Initial navigation opening and const variable setting of array items to store
+marked dates.
+
+Load items function takes the day as a parameter and outputs all days that align
+with it. The formula converts the timestamp into a readable format by convert it. 
+The height setting is to allow ample viewing height without squashing the text
+in the box.
+
+New items takes the list array of items and creates them as new ones. It then
+calls on set items to add them permantely into the calendar.
+
+Render item is the view port. It renders the calendar as a normal gregorian calendar by
+month. The touchable opacity allows the dates to be clicked and thus load the items associated with it. 
+
+All documentation for the calendar screen and agenda screen can be found here:
+https://www.npmjs.com/package/react-native-calendars
+
+*/
+
 const CalendarNick = ({navigation}) => {
- 
 
   const [items, setItems] = useState({});
 
@@ -58,6 +81,23 @@ const CalendarNick = ({navigation}) => {
       </TouchableOpacity>
     );
   };
+
+  /*
+
+The return statement that takes the agenda items are adds them to the calendar. 
+The array of items each require a date in YYYY-MM-DD and a name. You can also customise each
+with colours and stylings by extending entry with a comma. 
+
+The items are loaded for the month and they are rendered to the screen. 
+
+NOTE: 
+Due to the way it works, it is a slow loading process. Being not 100% efficient
+means it loads the ENTIRE calendar as a list. Which takes a large chunk of memory.
+Currently, this is the easiest way to run the calendar. Ideally, deleting all dates that
+have passed can help solve this issue AND ensuring that the calendar doesn't venture
+too far into the future. 
+
+*/
 
   return (
     <View style={{flex: 1}}>

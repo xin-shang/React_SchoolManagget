@@ -9,6 +9,15 @@ import { Calendar, Agenda } from 'react-native-calendars';
 
 import { Colors, Fonts } from '../assets/fonts/Fonts';
 
+/*
+
+Pre-Built component from online library. This incorporates the fonts folder and colors folder.
+
+Refer to https://www.npmjs.com/package/react-native-calendars
+for in depth documentation regarding each element.
+
+*/
+
 export default class CalendarScreen extends React.Component {
   constructor(props) {
     super(props);

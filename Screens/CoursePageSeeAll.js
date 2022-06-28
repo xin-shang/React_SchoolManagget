@@ -1,7 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
+// Please note this screen is not currently in use within the app
+// This screen was an alternate version of the course page that went unused
 import { SafeAreaView, StyleSheet, View, Text, ScrollView } from 'react-native';
+
+// Importing the accordian list libraries
 import {Collapse,CollapseHeader, CollapseBody} from 'accordion-collapse-react-native';
 
+// Importing the course card from components folder
 import CourseCard from '../components/CourseCard';
 
 const CoursePageSeeAll = ({ navigation }) => {
@@ -64,13 +68,11 @@ const CoursePageSeeAll = ({ navigation }) => {
     </SafeAreaView>
   );
 }
-
+// Definition of app styles
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    //alignItems: 'center',
-    //justifyContent: 'center',
   },
   collapse: {
     borderBottomWidth:1,

@@ -1,10 +1,13 @@
-import { StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+// Importing the icon library used
+// Link to icon packs from this library below
+// https://oblador.github.io/react-native-vector-icons/
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
+// Import of all screens used in navigation
 import Registration from './Screens/Registration';
 import Login from './Screens/Login';
 import CoursePage from './Screens/CoursePage';
@@ -22,22 +25,23 @@ import StudyTimer3 from './Screens/StudyTimer3';
 import TimerSelector from './Screens/TimerSelector';
 
 
-//Create the base objects for using the Stack Navigator
-
+// Create navigators for the app stack and bottom navigation
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-
-//Create each stack that holds the screens together when navigating
-//to that page. 
+// Function that runs the home stack
+// These functions are called by the tab navigation to change stack elements
 function HomeStack() {
   return (
+    // Apps the elements to the stack and specifies the frist screen
     <Stack.Navigator initialRouteName="Login">
+      {/* Creates a screen in the stack within a specific navigator
+          Name is used as the reference and is what is used in navigation calls
+          Component is the link to the screen itself and matches the name in import */}
       <Stack.Screen name="Registration" component={Registration} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={Home} />
 
-      {/* Might move to a different screen */}
       <Stack.Screen name="TimerSelector" component={TimerSelector} />
       <Stack.Screen name="Study Timer1" component={StudyTimer1} />
       <Stack.Screen name="Study Timer2" component={StudyTimer2} />
@@ -46,15 +50,21 @@ function HomeStack() {
   );
 }
 
+// Function that runs the course stack
 function CourseStack() {
   return (
     <Stack.Navigator initialRouteName="Course Select">
       <Stack.Screen name="Course Select" component={CourseSelect} />
+      {/* The same as creating new screens however contains an extra options paramerter
+          The options parameter is being used to define the pages title based on the name
+          of the route object that called it. This is what changes the course page name to
+          match the name of the course selected on the course selector page  */}
       <Stack.Screen name="Course Page" component={CoursePage} options={({ route }) => ({ title: route.params.name })} />
     </Stack.Navigator>
   );
 }
 
+// Function that runs the calendar stack
 function CalendarStack() {
   return (
     <Stack.Navigator initialRouteName="Calendar">
@@ -64,6 +74,7 @@ function CalendarStack() {
   );
 }
 
+// Function that runs the profile stack
 function ProfileStack() {
   return (
     <Stack.Navigator initialRouteName="User Profile">
@@ -75,14 +86,20 @@ function ProfileStack() {
   );
 }
 
-
-//Add the bottom tabs that display each tab across the bottom of the app. 
-//Each will call on the relevant stack and open the respective screen. 
-
+// The main app method that is run when the application starts
+// Sets up the apps bottom navigation
 export default function App() {
   return (
+    // Sets up the main navigation container
     <NavigationContainer>
+      {/* Defines the tab navigator */}
       <Tab.Navigator initialRouteName="Feed">
+        {/* Defines the homes screens in the tab stack
+          Name is used as the reference and is what is used in navigation calls
+          Component points to the function name defines the screens for the stack
+          Options is used to define if a header is require, the label on the tab
+          bar, and the icon used on the tab bar
+          The icon is from the material community icons library */}
         <Tab.Screen
           name="Home Stack"
           component={HomeStack}
@@ -97,6 +114,7 @@ export default function App() {
               />
             ),
           }} />
+        {/* Defines the course screens in the tab stack*/}
         <Tab.Screen
           name="CourseStack"
           component={CourseStack}
@@ -111,6 +129,7 @@ export default function App() {
               />
             ),
           }} />
+        {/* Defines the calendar screens in the tab stack*/}
         <Tab.Screen
           name="CalendarStack"
           component={CalendarStack}
@@ -125,6 +144,7 @@ export default function App() {
               />
             ),
           }} />
+        {/* Defines the profile screens in the tab stack*/}
         <Tab.Screen
           name="ProfileStack"
           component={ProfileStack}
@@ -139,16 +159,7 @@ export default function App() {
               />
             ),
           }} />
-      
-        
       </Tab.Navigator>
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-});
